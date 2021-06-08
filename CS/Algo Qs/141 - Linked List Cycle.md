@@ -1,0 +1,6 @@
+- topics
+    - [[linked lists]]
+    - [[LBYL vs EAFP]]
+    - [[cycle detection]]
+    - [[two pointer]] : [[fast and slow]]
+- 

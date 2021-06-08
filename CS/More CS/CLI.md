@@ -1,0 +1,16 @@
+- why
+    - faster
+    - alternate
+    - concise
+    - same window
+- also called shell/ terminal/ bash
+- anatomy: [command prompt] [command] [flag] [args]
+- tips and tricks
+    - ls <location>
+    - cp <existing> <location> # keeps name
+    - cp <existing> <new> # change name, can specify other location too in new
+    - rmdir -R # remove folders that contain stuff !! not recoverable
+    - control-r : reverse search!!
+- [[G ref]]
+    - https://docs.google.com/document/d/1wPppxulxWnr1YCPNSvBv__0qRveOr6U766ZpH2bBtBc/edit
+    - 

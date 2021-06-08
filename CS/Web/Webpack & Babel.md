@@ -1,0 +1,5 @@
+- Webpack = JS module bundler
+- Babel = JS Transpiler for converting new JS to old JS (maintaining backwards compatibility)
+    - preset = set of plugins, to support language features
+- 
+- 

@@ -1,0 +1,24 @@
+- [[algo and ds]]
+- [[problem attributes]]: [[best final state given series of dependent actions]], [[limited states + transitions]]
+- [[solution attributes]]:: [[DP]]
+- problem description:
+    - Say you have an array for which the __i__th element is the price of a given stock on day __i__.
+    - Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one and sell one share of the stock multiple times) with the following restrictions:
+        - You may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).
+        - After you sell your stock, you cannot buy stock on next day. (ie, cooldown 1 day)
+- related
+    - builds on [[Buy/Sell Stock]], archetypal DP
+- solution
+    - def maxProfit(self, prices: List[int]) -> int:
+        - '''
+        - nothing > buy > sell >
+        - essentially the same as traditional stock problem + one extra cooldown state
+        - the recursive relationship is similar,
+        - the dp can be compressed to "last entry"
+        - "
+        - if len(prices) == 0:
+            - return 0
+        - mp_c, mp_h, mp_r = 0, -prices[0], -float("inf")
+        - for p in prices:
+            - mp_n, mp_b, mp_s = max(mp_n, mp_s), max(mp_b, mp_n-p), max(mp_s, mp_b+p)
+        - return max(mp_s, mp_n)

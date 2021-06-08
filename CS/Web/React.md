@@ -1,0 +1,6 @@
+- pm run build compiles
+- entry index.js (components) compile into static
+- Commands
+    - npm init -y 
+- prop types
+    - like object attributes

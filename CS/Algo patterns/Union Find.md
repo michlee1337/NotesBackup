@@ -1,0 +1,7 @@
+- keeps track of elements in disjoint sets
+- find
+    - given an element, find the group it belongs to
+- union
+    - merge two groups
+- Uses
+    - cycle detection

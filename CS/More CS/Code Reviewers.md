@@ -1,0 +1,38 @@
+- looking for
+    - design
+    - style
+    - bugs
+    - tests
+- best to find people who are
+    - responsive
+    - familiar w project
+    - familiar w codebase
+    - best: teammate or host
+- PR should contain
+    - set of reviewers
+    - description
+        - explain change
+        - explain why
+        - !understandable
+        - first line: one line summary
+- Good PRs are
+    - small
+        - why
+            - faster review
+            - easier fix
+            - easier merge
+            - less blocks 
+            - less bug prone
+        - how
+            - split by files
+            - refactor on separate
+- workflow tips
+    - ping reviewer in a day
+    - big pr is ok if: deleting, binaries, refactoring (automated)
+    - after recieving comments
+        - make appropriate changes
+        - if disagreeing, respectfully explain why and discuss
+        - factor in back and forth into timelines
+    - when giving review
+        - respond in 1/2 days
+        - ask clarification questions

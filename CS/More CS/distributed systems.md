@@ -1,0 +1,4 @@
+- [[Data Systems - Klepmann]]
+- https://jvns.ca/blog/2016/02/09/til-clock-skew-exists/
+- 
+- 

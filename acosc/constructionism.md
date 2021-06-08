@@ -1,0 +1,4 @@
+https://www.gse.harvard.edu/~ddl/articlesCopy/FischerGroundwork.MBE2009.3.1.pdf
+
+MBE
+- In the same way, cognitive and neuroscience research shows that knowledge is based in activity. When animals and people do things in their worlds, they shape their behavior. Based on brain research, we know that likewise they literally shape the anatomy and physiology of their brains (and bodies). When we actively control our experience, that experience sculpts the way that our brains work, changing neurons, synapses, and brain activity ( Hubel & Wiesel, 1970; Singer, 1995 ). When we are simply exposed to events and information

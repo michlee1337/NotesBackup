@@ -1,0 +1,1 @@
+https://www.reddit.com/r/CGPGrey/comments/ihkqjp/cortex_105_atomic_notes/

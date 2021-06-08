@@ -1,0 +1,112 @@
+{
+  "main": {
+    "id": "d51f5d3075b31a57",
+    "type": "split",
+    "children": [
+      {
+        "id": "00cec24ddab56865",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Mission Control/Summer 2021.md",
+            "mode": "source"
+          }
+        }
+      },
+      {
+        "id": "9d78c365470e87a5",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "spaced repitition - deliberate practice.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "af335151a79ff94d",
+    "type": "split",
+    "children": [
+      {
+        "id": "01c6cd9fc223d916",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "803cdd4498cfe10d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "3ead64ee3ae0aaa0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b123e7f263d5bf99",
+    "type": "split",
+    "children": [
+      {
+        "id": "7c93b945dfd2ef30",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "76667d465a684844",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Mission Control/Summer 2021.md",
+                "collapseAll": true,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 304
+  },
+  "active": "00cec24ddab56865",
+  "lastOpenFiles": [
+    "Mission Control/Summer 2021.md",
+    "augmenting human intellect.md",
+    "spaced repitition - deliberate practice.md",
+    "interactive articles.md",
+    "spaced repitition/ deliberate practice.md",
+    "better goodreads.md",
+    "Mission Control/Todo.md",
+    "collaborative annotation.md",
+    "collaboration.md",
+    "annotation.md"
+  ]
+}

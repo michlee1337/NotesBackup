@@ -1,0 +1,3 @@
+- logic process
+    - identify maximum length of array needed in return value
+    - iteratively calculate, and update the relevant positions in return array (normally smtg like index i or index i and i+1)

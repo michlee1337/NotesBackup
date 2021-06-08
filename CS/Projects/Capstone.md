@@ -1,0 +1,138 @@
+- need smaller primary chunks to be able to combine in unique ways: ex algo and ds
+- collaborative notes on a particular course that students share
+    - create and share concept map on the subject
+        - maybe one "collaborative shared" map and some personalised student maps
+    - share notes and example applications of each concept
+    - could choose to make public as well
+    - extension/ flexibility
+        - doesn't have to be a "course" or a "class", groups of people studying the same thing can have a shared database as well
+- Main Value
+    - Centralisation
+    - Synthesis (through collaboration)
+- branches
+    - skill breakdown
+        - specific, one author lots of work
+    - collaborative note taking
+        - general, collaborative
+    - personal long term development goals
+        - ex: for me its getting good at programming languages, and algo, and hardware
+        - malleable "interesting", "landmarks im interested in"
+- Questions to ask people
+    - how do you learn something new?
+    - how do you create a study guide/ what would make you use it?
+- Questions to explore
+    - how can a bunch of people collaborate to create courses with minimal effort?
+    - what can i do for minervans right now?
+        - collaborative notes on a particular course that students share
+        - create and share concept map on the subject
+            - maybe one "collaborative shared" map and some personalised student maps
+        - share notes and example applications of each concept
+        - could choose to make public as well
+- CORE
+    - PROBLEM: Independent studying requires students to brute force search and organise resources, which is inefficient and demotivating.
+        - Key Problems:
+            - Unable to navigate the records of knowledge
+                - can't find good resources
+                    - don't know reliable sources/ channels (ex: communities)
+                    - no vocabulary to do the search
+                - can't identify good vs bad resources
+                    - can't identify "level of abstraction" of the resource within the relative knowledge field
+                    - can't identify missing background knowledge
+                    - can't identify appropriate level of difficulty/ depth
+                    - can't identify relevance
+            - Unable to fit knowledge from different sources together
+                - no framework to fit into
+    - SOLUTION: Provide foundational resources, mapped ontologically, to guide independent learners to form a foundational understanding of a topic and its knowledge areas.
+    - 
+- INSPIRATION
+    - learning something is not just learning content, it's learning it's structure and mapping things out for future information to go. (for now loosely termed "meta-information")
+    - independent learners have to do so much work just to figure out a topic, and all independent learners do the same work for the same topic, but that knowledge normally isn't passed on!!
+    - A lot of people write guides/ articles after going through that work
+        - these guides are extremely helpful
+        - but they're hard to find/ only reach a few people by pure chance
+            - ex: freecodecamp likes to shoutout helpful guides
+    - mentorship and digital gardens are primarily useful (at least to me) BECAUSE they are key sources for that kind of meta information but mentorship is not scalable and digital gardens are not organised enough
+    - 
+- CURRENT SOLUTIONS AND WHY THEY'RE INSUFFICIENT
+    - Coursera/ EdX/ books
+        - normally aimed at a level of "knowledge abstraction" suitable for a 4 month unit of knowledge, not a multi-year study program
+        - designed as a single self contained unit of knowledge, does not normally facilitate further growth.
+        - does not normally explicitly provide a skeleton/ framework of understanding to be built upon
+            - no clear concept chunking + relationship mapping
+        - there's a _lot_ of them
+    - University course guidelines
+        - not meant to be used by the public
+        - not easily accesible/ understandable
+    - Medium/ Github/ Blog collections of guidelines and resources
+        - limited audience (pure luck search as well)
+        - scattered (no centralisation)
+        - not easily built upon/ updated
+    - Mentorship
+        - not scalable (normally 1-1)
+    - Digital Gardens
+        - too messy to be navigable, requires a lot of parsing by "learner"
+- CURRENT WORK
+    - !! pivot: roadmap rather than ontological map
+        - reasoning: beginners need roadmaps, and thats the core problem i'm trying to solve
+        - so now i want people to be able to map out the journeys they've taken and share it for other people to follow
+        - knowledge areas, resources used, framing of how to approach that area and use the resources, [detours? - tangential intersting?]
+    - Base Conceptualisation
+        - double-ended application
+            - PROVIDER END: get data from independent learners (provide some kind of tooling functionality)
+            - CONSUMER END: display data for independent learners
+    - Key things to figure out
+        - How do I get the data? Provider end is one way, maybe I should look into possibly mining data first?
+    - Provider end
+        - perhaps provide a tool to make networked notes? hmm
+            - thats really just Roam. can i mine data somehow?
+                - Roam isn't _meant_ to link to external resources tho im sure people do...
+            - some other sources of mine-able data would be like wikipedia, uni courses/ books
+        - what kind of data do i actually need?
+            - resources and info about it
+                - relative "ranking"
+                - what "topic" it relates to
+            - how does a topic "break down" into subtopics (basically parent child relationships between topics - sibling relationships can be inferred?)
+    - Consumer end
+        - ontological map of resources
+            - Goal is basically a bunch of "buckets" of resources labelled by subtopic for each topic
+                - could provide logic to navigate deeper/ shallower through buckets but i think for learning purposes 2 level deep is more manageable?
+- Kitchen Sink thoughts
+    - haha when did this become a social system design project xD
+    - i do need to dev stuff so i can iterate on it, probably won't get to a clear design just through research
+        - i could probably work on the consumer interface first cause i have a pretty clear/ simple idea for that. basically the prototype i had before.
+    - network
+        - Stian
+        - Scheffler
+        - Gattegno
+        - Bhavya
+        - Kevin Workman
+- Archived
+    - In a sentence: A web app that creates study guides based on what has worked for previous independent learners.
+        - double sided web app
+            - one side is that you can use it to create your own study guide, khan academy style
+                - break down into subtopics, link resources, [keep your notes?], track progress
+            - another side is to look up study guides that past learners have used and that others have reused and liked
+        - Use cases:
+            - I've learnt something and want to document what I did
+                - create a guide
+            - I want to learn something but don't know how
+                - look up a guide that has been created
+            - Possibility: I'm trying to learn something and want to track my progress
+                - these are the resources i'll use
+                - my "learn-list" basically, like a bookshelf/ booklist for studying
+    - a website that lists high level guides for using online resources to learn certain topics. 
+        - You know those study guides that people post on github/ medium/ leetcode discuss?
+        - I want to create an app for people to create and share those guides easily.
+        - How's it diff from Coursera?
+            - 1) it's open source, anybody can create one and vote on them
+                - important because often people's guides are more relevant and efficient. 
+                    - school curriculums are very heavy and demand a lot of time and energy, they may not cover certain trade/ new topics well (like software engineering or digital collaboration)
+            - 2) it's much less content-heavy, it just provides the structure and links to resource.
+                - the main goal is to provide a high level roadmap to navigate online resources that already exist.
+        - Udemy but low effort and free?
+    - Provide foundational resources, mapped ontologically, to guide independent learners to form a foundational understanding of a topic and its knowledge areas.
+        - what kind of synthesis/ analysis can i do using a dataset structured like this?
+            - common subtopic breakdowns
+            - common resources linked (mentioned in x guides)
+            - voting for best guide!
+- 

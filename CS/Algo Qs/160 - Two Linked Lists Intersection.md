@@ -1,0 +1,5 @@
+- [[linked lists]]
+- https://leetcode.com/problems/intersection-of-two-linked-lists/discuss/49785/Java-solution-without-knowing-the-difference-in-len!
+- 
+- [[solution attributes]]
+    - to counteract difference in lengths, reset pointer to head of other list (so essentially connecting both lists into a loop ) :-)

@@ -1,0 +1,67 @@
+- Description: Index page for algo and ds practice
+- Problems I need to [[review]]
+- [[problem attributes]]
+    - structures
+        - [[primitives]]
+        - [[Arrays]]
+        - [[strings]]
+        - [[linked lists]]
+        - [[stacks & queues]]
+        - [[binary trees]]
+        - [[heaps]]
+        - [[searching]]
+        - [[hash tables]]
+        - [[sorting]]
+        - [[BSTs]]
+        - [[recursion]]
+        - [[DP]]
+        - [[greedy]]
+        - [[graphs]]
+    - traits
+        - [[sorted]]
+        - [[k-most]]
+        - [[best final state given series of dependent actions]]
+        - [[limited states + transitions]]
+        - [[cycle detection]]
+- [[solution attributes]]
+    - [[sliding window]] [[binary search]]
+    - [[update indexes]]
+    - [[two pointer]]
+- mapping
+    - [[limited states + transitions]] -> [[state machine]]
+    - [[best final state given series of dependent actions]] -> [[DP]]
+    - [[find specific idx/ range given sorted]] -> [[binary search]]
+    - [[cycle detection]] -> [[fast and slow]]
+- [[mistakes]]
+- [[problems]]
+    - [[658 - Find K Closest Elems]]
+    - [[910 - Smallest Range]]
+    - [[309 - Buy Sell Stock with Cooldown]]
+    - [[394 - Decode String]]
+    - [[448. Find All Numbers Disappeared in an Array]]
+    - [[295 - Median]]
+    - [[160 - Two Linked Lists Intersection]]
+    - [[45 - Jump Game 2]]
+    - [[337 - House Robber 3]]
+    - [[141 - Linked List Cycle]]
+- Kitchen Sink:
+    - String
+        - patterns: https://leetcode.com/discuss/general-discussion/651719/how-to-solve-dp-string-template-and-4-steps-to-be-followed
+    - Tricks to look out for:
+        - something balanced/ looking for some sum/ looking for some contiguous subarray = running sums, repeated sums
+    - dope explanation: https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/538/week-5-may-29th-may-31st/3346/discuss/159295/Python-solutions-and-intuition
+    - Backtrack
+        - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Facsoc%2FfvlWv3Nn3e.png?alt=media&token=bc894a37-08be-44c7-b765-0d898213b51f)
+            - decisions outside if basecase check
+    - Graph:
+        - Recognizing:
+            - any time there is a list of two tuples
+        - Appraoching:
+            - [[Union Find]]
+            - Topological Sort
+            - BFS/ DFS
+    - Bit:
+        - try odd even
+- resources
+    - errichto youtube
+    - 

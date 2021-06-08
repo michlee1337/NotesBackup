@@ -1,0 +1,2 @@
+- Look Before You Leap vs Easier to Ask for Forgiveness than Permission
+	- check before access, or do it and handle errors

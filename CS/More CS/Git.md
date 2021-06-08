@@ -1,0 +1,14 @@
+- Workflow dev:
+    - [[rand cool]]
+        - [](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Facsoc%2FGiFPsV725p.png?alt=media&token=bc09f54d-803e-4038-8a2d-0f8c3ac3e7d6)
+- for collab dev
+    - isolate ppls work
+    - peer review to merge
+    - change history
+    - reversible change
+- tips and tricks
+    - git poll !!
+    - git rebase interactive (remove commits :OO from tail end at least)
+        - git rebase abort
+        - reset hard xD
+    - 

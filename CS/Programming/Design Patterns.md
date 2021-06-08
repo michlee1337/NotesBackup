@@ -1,0 +1,14 @@
+- Introduction
+- Observer
+- Decorator
+- Factory
+- Singleton
+- Command
+- Facade
+- Template
+- Iterator and Composite
+- State
+- Proxy
+- Compound
+- Applications
+- More

@@ -1,0 +1,15 @@
+- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Facsoc%2FoMuLgcTidt.png?alt=media&token=df0152ce-b5c6-4c35-8d6e-b2988337aa87)
+- Data Structures in databases
+    - Hash indexes
+    - SSTs and LSM-Trees
+    - B-Trees
+    - B Vs LSM
+    - Other Indexing
+- Transaction Processing or Analytics
+    - Data Warehouse
+    - Stars and Snowflakes (Analytics Schemas)
+- Column Oriented Storage
+    - Column Compression
+    - Sort Order
+    - Writing
+    - Aggregation (Data Cubes and Materialized Views)

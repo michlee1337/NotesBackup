@@ -1,0 +1,233 @@
+- Leaders and Followers
+    - Synch vs Asynch Replication
+    - Setting up New Followers
+        - take snapshots of leader at intervals (w log seq num/ binlog coord)
+            - ideally, don't lock db
+            - Most db support since required for backups, else 3rd party tools
+        - copy snapshot to follower
+        - follower connects to leader and req all changes since snapshot
+        - ! practically, depends on db. Could automate, might need admin
+    - Handling Node Outages
+        - Follower failure
+            - each follower keeps log on local disk
+            - based on last transaction, req all changes from leader and catch up
+        - Leader failure: failover
+            - promote a follower to leader
+                - clients reconfig to send write to new leader
+                - followers reconfig to get changes from new leader
+            - often manual, automatic possible
+            - process
+                - determine leader failure (monitor message bounce response)
+                - choose new leader (via election or controller node, related to [[Consistency and Consensus]])
+                - Reconfig data system to recognize new leader
+                    - make sure old leader demoted
+            - dangers
+                - async means new leader may be missing writes from old leader
+                    - often old writes discarded, reducing durability
+                    - if other storage systems are coordinated w this db, discarding is dangerous (ex: GitHub primary key Redis)
+                - Split brain: two nodes think they're leader [[problems]]
+                    - should have mech to shut down one, but risk of shutting both
+                - What timeout = dead leader?
+                    - unnecessary failovers during high load/ network problems makes things worse
+    - Implementing Replication Logs
+        - Statement based
+            - leader logs every SQL statement
+            - problems:
+                - nondeteministic funcs (ex: NOW) cause inconsistencies
+                - data dependencies (autoincrement, WHERE) requires exact order of execution, limiting concurrency
+                - side effects MUST be deterministic (ex triggers, stored procedures, user-defined funcs) [[REVISIT]]
+            - so many edge cases, not preferred.
+        - Write Ahead Log shipping
+            - already present in log/ b tree structured engines [[Storage and Retrieval]]
+            - used is PostgreSQL and Oracle
+            - disadvantage: low level
+                - coupled w storage engine
+                - downtime required to upgrade db software
+        - Logical (row-based), decoupled from storage engine
+            - higher level log, describes row changes
+                - insertion: new val of all cols
+                - deleted: enough info to uniquely identify row (ex: primary key, or all col val)
+                - update: enough info to id, and new val of changed cols
+            - transaction changing several rows generates several log records + transaction finished log
+            - ex: MySQL
+            - Benefits
+                - backward compatibility
+                - external apps can parse (ex: sending to warehouse, building custom indexes/caches) 
+                - change data capture [[Stream Processing]]
+        - Trigger based
+            - app code needed for flexibility
+                - ex: only a subset, or from one db type to another
+            - Oracle GoldenGate can make change data available
+            - Else use triggers and stored procedures
+                - triggers allow for custom app code during a write transaction
+                - ex: databus in Oracle, Bucardo in Postgres
+            - more overheads and bug prone, but very flexible
+- Problems with Rep Lag
+    - Overview
+        - Read-scaling architecture
+            - asynch folllowers
+            - write to leader but read from any
+            - eventual consistency = eventually follower = leader
+            - replication lag = follower out of date by some time
+    - Reading own Writes
+        - User does not see data they just submitted
+            - write to leader, then read from lagging follower
+        - Read after write consistency
+            - when reading something modded by user, only read from leader
+                - req: need to know if smtg may be modded (ex: user profile)
+                - only effective if few editable things per user
+            - one minute after last update by user, read everything from leader
+                - if geographically distributed, routing to leader is complex
+                - cross device complications
+            - monitor rep lag per follower and prevent reads if too far behind
+            - client remember most recent write and ensure read only from followers at least updated to that point
+                - if using clock timestamp, clock synch is critical
+                -  cross device complications
+            -  cross device complications
+                - if cross device, remembering last update is complex
+                - if different device use diff access networks, might route to diff data-centers (must prevent)
+            - 
+    - Monotonic Reads
+        - Guarantee that users don't see data moving backwards in time
+            - happens when later reading from a follower with more lag
+        - approaches
+            - ensure reads from same follower
+            - if that follower fails, reroute
+    - Consistent Prefix Reads
+        - prevents data getting disordered
+            - ex: messages sent later being recorded earlier
+        - i.e. if writes have a sequence, they will appear in that sequence during read
+        - problem in partitioned databases 
+            - writes don't have global ordering
+            - solution: causally related writes must be in the same partition
+                - problem: inefficient
+            - solution: keep track of dependencies
+                - [[Consistency and Consensus]]
+    - Solutions for Rep Lag
+        - when designing systems, consider what happens if rep lag of minutes to hoursif rep lag is a problem, must design for guarantees 
+        - app code can provide guarantees, but complex and buggy
+        - transactions exist to provide guarantees in database
+            - [[Partitioning]], [[Transactions]]
+            - Alternatives: [[Batch Processing]], [[Stream Processing]], [[Future]]
+- Muli Leader Rep
+    - Why?
+        - if can't connect to the one leader, can't write
+    - How?
+        - each leader is a follower to other leaders
+    - Use cases
+        - multiple datacenters
+            - one leader in each datacenter
+            - performance: perceived performance better (interdatacenter delay is hidden)
+            - availability: datacenter outtage doesn't require failover
+            - availability: tolerate network problems better because multiple possible write leaders
+        - clients with offline operation
+            - every devices local database acts as leader
+                - rep lag can be hours or days
+            - ex: calendars
+            - couch db is designed for this
+        - Collaborative Editing
+            - guarantee no edit conflicts = lock doc to edit
+            - if simultaneous updates = many small changes + deal with conflict resolution
+    - Handling Write Conflicts
+        - ^ is the biggest problem with multi leader
+        - if you make conflict detection synch, you lose main advantage of multi leaders
+        - avoid them
+            - ensure all writes to a record go through the same leader
+        - converge towards consistent state
+            - give each write a unique id, highest id wins (LWW)
+                - prone to data loss [[Consistency and Consensus]]
+                - Merge conflicts automatically
+                - Record conflict and ask user to resolve
+        - custom logic for conflict resolution
+            - on write
+                - ex: bucardo allows Perl
+                - normally can't prompt user, background process and must be quick
+            - on read
+                - ex: couch db
+                - all the conflict versions are returned
+                - can prompt user here 
+            - applies at row/ document level. A transaction can have multiple conflicts
+            - auto resolution
+                - complicated and buggy
+                - ex: Amazon
+                - Conflict free replicated datatypes (CRDTs)
+                    - datastructures that automatically resolve conflicts
+                    - 2 way merge function
+                    - Riak 2.0
+                - Mergable persistent data structures
+                    - explicitly track history and use 3 way merge function
+                - Operational transformation
+                    - Etherpad and Google Docs
+                    - for ordered list of items (ex characters in text doc)
+            - recognizing conflicts
+                - sometimes harder than others
+                - ex: app logic checks before writing, but after writing you have data that cannot be simultaneously true like two bookings of the same room
+                - [[Transactions]], [[Future]]
+    - Topologies
+        - The communication paths of write propogation
+        - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Facsoc%2F5i9lhe5b7Y.png?alt=media&token=98cd6219-a12b-47fb-8105-3baaebc8e152)
+        - star also generalizable to a tree
+        - data change must be tagged with identifiers of nodes passed through (prevent infinite loop)
+        - circular and star can fail if any one node fails
+            - reconfiguration of topology is normally manual
+        - dense 
+            - more available because no single point of failure
+            - can result in disorganised writes (diff link speeds)
+            - causal sequence preserved with version vectors [[Consistency and Consensus]]
+            - 
+- Leaderless
+    - examples
+        - Used in Amazon Dynamo, Riak, Cassandra, Voldermort
+        - also known as Dynamo-style
+    - implementation
+        - client sends to several replicas
+        - coordinator node sends to several replicas
+            - does not enforce ordering
+    - Writing when a node is down
+        - no change: when client has enough OK responses, write is succesful
+        - read requests also sent to several nodes, keep newest version (based on version number)
+        - eventual consistency
+            - read repair
+                - write to stale upon mismatch reads
+                - works well for frequent reads
+                - non frequent reads might have low durability
+            - anti entropy
+                - background process for comparing replicas
+                - no particular ordering, might have significant delay
+        - quorums for reading and writing
+            - given n replicas, w number of confirmations = successful, query r nodes each read
+            - quorum reads and writes obey w+r> n
+                - guarantees up to date value (at least one must be up to date)
+            - variable configurable on Dynamo
+                - normally: n is odd, w = r = (n+1)/2
+                - if few writes and many reads, w=n; r=1 makes sense
+                    - but one node failure = all fail
+                - !! a cluster can have more than n nodes, but any value is only on n nodes [[Partitioning]]
+            - availability
+                - w<n, can still process writes with node failure (tolerance is n-w). Same for r and reads.
+                - normally, reads and writes sent to n in parallel, the w and r just determine how many responses we wait for
+    - Limits of Quorum Consistency
+        -  often w and r chosen to be majority
+            - tolerates up to n/2 failures
+        - optionally could also not satisfy quorum condition
+            - more likely to read stale
+            - lower latency and more availability
+                - fail when available nodes falls below w/r respectively
+        - even with quorum, could read stale
+            - sloppy quorum
+            - concurrent writes
+                - can lose writes due to clock skew if merge based on timestamp
+            - write and read concurrency
+            - if write succeeded on under w nodes, those successful writes may not be rolled back
+            - if one of the w nodes fail and is restored based on a non w node, could break quorum condition as w -= 1
+            - more weird timing edge cases
+        - Dynamo-style databases are optimised for use cases that are ok w eventual consistency
+        - [[Transactions]],[[Consistency and Consensus]]
+        - Monitoring Staleness
+            - important for maintenance and debugging
+            - rep lag easy in leader rep
+                - subtract follower position from leader position
+            - for leaderless, not common
+    - Sloppy Quorums and Hinted Handoff
+        - 
+    - Detecting Concurrent Writes

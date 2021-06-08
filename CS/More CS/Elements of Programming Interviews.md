@@ -1,0 +1,25 @@
+- main topics: [[algo and ds]], [[books]]
+- milestones
+    - review all problems to practice recognizing problem patterns
+    - current status:
+        - skipped primitives
+        - on arrays: 5.4
+- algo & ds
+    - [[primitives]]
+    - [[Arrays]]
+    - [[strings]]
+    - [[linked lists]]
+    - [[stacks & queues]]
+    - [[binary trees]]
+    - [[heaps]]
+    - [[searching]]
+    - [[hash tables]]
+    - [[sorting]]
+    - [[BSTs]]
+    - [[recursion]]
+    - [[DP]]
+    - [[greedy]]
+    - [[graphs]]
+    - [[parallel]]
+    - honors
+- Domain

@@ -1,0 +1,77 @@
+- Topics
+    - Relationship
+        - What defines a good intern/ internship relationship for you?
+        - expectations for whole internship? next week?
+        - What topics?
+            - strictly work/ project/ team or general google or engineering/ mentorship?
+            - do you want to hear updates on what im working on?
+        - how often to meet, what channels?
+        - formal informal?
+        - Past internships? What worked/ didn't?
+        - Any advice?
+        - what would I need to be at a level to work on this team full time?
+    - My Role
+        - Team: Cloud WAT(?)
+        - Project: Delivery Systems?
+    - Team
+        - who else should I interact with regularly?
+        - design meetings?
+    - I'd love to learn about systems architecture, technical team collaboration, and product development
+    - I'd love to learn about systems architecture in general and am super happy to be on Cloud
+        - most of what I know is self-taught so i feel that my knowledge is a bit disorganised and missing fundamentals. Recommendations for fundamental topics/ resources/ frameworks/ channels?
+        - What concepts/ tools should I look into?
+    - Workflow
+        - personal laptop?
+    - Little advice
+        - Government ID workflow
+        - Scheduling back to back sessions (tmrw design team then grow intro)
+        - Can I RSVP for design reviews?
+        - should I do GROW programs in order?
+            - workflow, quality and testing, security and privary
+        - I'll be doing multiple grow programs at a time (to switch up brain modes in a day?)
+        - will schedule them properly after this call
+        - Anthem
+- Update
+    - done with workflow EXCEPT issue with government ID
+    - attended the tech talk in the morning about GCF
+    - i-9 meeting tomorrow
+    - signed up for mentorship, waiting to hear back
+    - will be working on Grow
+    - Joined asians and women, can i do the empowerment week (Jul 13-17)?
+- No Access
+- Googley
+    - trust
+    - Googlre Free (Codebase)
+    - small teams of interns working on a theme
+        - 3 interns: event delivery infrastructure
+            - June 15
+        - Host: Hamid
+            - feedback and evaluation
+        - Co-host: TBD
+        - introduction
+            - current
+            - experience
+            - what i what want 
+    - starter project
+        - C++
+        - 2 weeks
+        - weekly 1-1
+        - ask via chat + GVC (?)
+    - Safety net: host, co-host, peers
+    - about language and frameworks (11 weeks)
+        - C++ cloud events SDK
+    - second meeting 
+- quick q
+    - only 3 people to reach out 
+- action
+    - protobuf google
+        - define a message
+        - how to compile
+        - basics C++
+        - build code together w build system (framework: Bazel), blaze
+    - half a day each, hello world
+        - couple of days
+        - codelabs and samples
+    - Wednesday/ Thursday/ Friday: setup half and hour
+- how to schedule
+    - 

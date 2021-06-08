@@ -1,0 +1,2 @@
+- https://leetcode.com/problems/flatten-nested-list-iterator/discuss/80146/Real-iterator-in-Python-Java-C%2B%2B
+- [[stack of list index pairs]]

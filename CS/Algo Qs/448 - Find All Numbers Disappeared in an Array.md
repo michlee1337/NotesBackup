@@ -1,0 +1,3 @@
+- Time vs space tradeoff:
+    - one pass: use a set
+    - two pass, in place: [[update indexes]]

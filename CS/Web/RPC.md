@@ -1,0 +1,3 @@
+- Framework
+- Used in microservices architecture
+- Ancestor: CORBA

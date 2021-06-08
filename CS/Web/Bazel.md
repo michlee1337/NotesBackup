@@ -1,0 +1,81 @@
+- Overview
+    - Open Source Build Tool
+    - High Level
+        - Based on concept of libs, bins, scripts, datasets
+    - Multiple language and platform support
+- Pros
+    - high level
+    - fast and reliable
+    - multi platform
+    - scalability (by # source files)
+    - extensible (lang support)
+    - Separation of Concerns
+    - Functional 
+- Workspace, packages Targets
+    - Workspace
+        - Directory that contain source files
+            - contains sym links to build output directors
+        - Directories that contain a file named WORKSPACE
+            - (ignores directory trees in a workspace rooted in a subdirectory w WORKSPACE since that's a seperate workspace)
+        - alias to WORKSPACE.bazel (priority)
+    - Repositories (code organized inside it)
+        - directory with WORKSPACE file is the root, ie `@`
+        - Other external repos are defined in the WORKSPACE file
+            - https://docs.bazel.build/versions/3.2.0/be/workspace.html
+            - https://docs.bazel.build/versions/3.2.0/repo/index.html
+        - ! repositories depended upon transitively are not added automatically. [[?]]
+    - Package
+        - related files + dependency specs
+        - directory containing a file named BUILD of BUILD.bazel
+        - should be beneath the root directory in workspace
+        - includes everything beneath it, except those that contain a BUILD file
+    - Targets
+        - elements in a package
+        - two types: files and rules (sometimes package groups too)
+        - files are made of source files (written by human) and generated files (gen by build tool)
+        - rule: relationship between input and output files (+ derivation)
+            - output files are always generated
+            - input can be human or generated or rule (allows rule chaining)
+        - rule always generates files that belong it its own package (rules inputs can come from another package)
+        - package groups: set of packages that limit access to certain rules
+            - defined by package_gruoup
+            - name + list of packages
+            - can only refered via visibility attribute of rule or default_visibility attribute of package
+            - no generate or consume files
+            - https://docs.bazel.build/versions/3.2.0/be/functions.html#package_group
+    - Labels: name of a target
+        - `@myrepo//my/app/main:app_binary`
+            - if ref to repo it is contained it, can leave out the @myrepo
+        - my/app/main (package name) + app_binary (target name)
+            - if colon left out, target name assumed as package name
+        - labels vs packages
+            - labels start with //
+        - in build file, package name of label and colon can be omitted
+            - convention that keep colon for rukes but not files
+            - can also refer to files in package by name relative to package directory
+    - Lexical spec of labelRules
+        - target-name is the name of target in the package
+        - rule name is the `name` attribute value in BUILD file
+        - name of file is pathname relative to directory containing BUILD file
+        - can use / in name of file target but avoid in rule of name
+        - name of package is name of directory containing its BUILD file
+    - Rules
+        - can be one of many classes
+        - has set of attributes (see build encyclopedia)
+            - srcs: list of targets that are inputs
+            - outs: (cannot contain package component), things that depend on the rule
+        - can build a build dependency graph out of rules
+- Build files
+    - loading extension
+- types of build rule
+- dependencies
+    - actual and declared
+    - types
+    - using labels to ref directories
+- 
+- 
+- Bazel query
+    - to analyze build dependencies
+- 
+- 
+- https://docs.bazel.build/versions/master/be/overview.html

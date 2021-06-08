@@ -1,0 +1,26 @@
+- Hamid
+- Ana Manolache
+- Diana - GCF
+- Luna Lu - sent me links C:
+- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Facsoc%2Fk6BdzZwfF0.png?alt=media&token=0e7cb799-005a-4c08-8ac4-d9d69e177f98)
+    - New York SF Seattle SF
+- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Facsoc%2FVny1cqso91.png?alt=media&token=48994431-7569-452d-9783-a831286f2318)
+    - learning and support, not hiring or returning
+- Community
+    - social media
+        - #GoogleInterns, @GoogleStudents
+- Host
+    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Facsoc%2F84tmsuB06H.png?alt=media&token=804644c7-3d75-4f9a-a392-8594d6e45d4e)
+- Guides
+    - on evaluations
+- Performance Factors
+    - what when and how to deliver
+    - set and adjust objectives and key results
+    - clear and actionable feedback
+    - manage relationships thoughtfully
+- Self Check in
+    - what skills am I building?
+    - what is expected for me?
+        - what is OKRs
+        - what is success?
+    - am i building meaningful connections?

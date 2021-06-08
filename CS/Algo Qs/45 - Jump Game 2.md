@@ -1,0 +1,5 @@
+- [[review]]
+- https://leetcode.com/problems/jump-game-ii/
+- answer
+    - https://leetcode.com/problems/jump-game-ii/discuss/485780/Python-O(-n-)-sol.-based-on-greedy-of-coverage.-90%2B-With-explanation
+- 

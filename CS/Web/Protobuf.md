@@ -1,0 +1,66 @@
+- WHAT: dumb data holders: like structs in C [[?]]
+    - serialisation for sending messages across languages
+    - good performance when sending high number of similar schema objects
+    - often used for sending messages to services
+    - Declare schema, use as encoder and decoder
+- https://developers.google.com/protocol-buffers/docs/cpptutorial
+- Workflow
+    - write a .proto description of data structure
+        - add message for each data to serialize
+        - specify name and type for each field in message
+            - each field must be modded with required/optional/repeated (array-ish)
+            - !! required is forever !! (otherwise will break forward compatability)
+        - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Facsoc%2F7vNASLdkS1.png?alt=media&token=7b86359e-9aa1-4889-a201-f0c6368c2bd0)
+    - protobuf compiler creates class that implements auto encoding and parsing of data w bin format (efficient)
+        - compile classes from .proto using protoc (compiler)
+        - `protoc -I=$SRC_DIR --cpp_out=$DST_DIR $SRC_DIR/addressbook.proto`
+    - generated class provides getters and setters and read/ write the entire thing as a unit
+        - generates methods on fields
+            - get_
+            - set_
+            - has_
+            - clear_
+            - string has mutable_
+            - repeated fiedls has _size
+            - indexing
+            - add_
+        - enums and nested classes
+        - generates methods on messages
+            - isInitialized
+            - debugstring
+            - copyfrom
+            - clear
+        - parsing and serialization
+            - serialize to string
+            - parse from string
+            - serialize to ostream
+            - parse from istream
+    - allows extensions (backwards compatibility)
+        - !! MUST NOT
+            - change tag numbers
+            - add/ delete required fields
+        - May
+            - delete optional/ repeated fields
+            - add optional/ repeated fieldws WITH new tag numbers
+        - [[Encoding and Evolution]]
+        - Exceptions: https://developers.google.com/protocol-buffers/docs/proto#updating
+- integrating into app
+    - wrap in app specific class for better object oriented behaviour
+        - ie create better interface (hiding some data/ methods, exposing convenience funcs)
+        - !! never inherit from generated classes (will break), also bad [[OO]]
+    - writing messages
+        - create and populate instances
+        - write to o stream
+            - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Facsoc%2F2QXqcdQSP4.png?alt=media&token=5370c4bc-21f0-40d2-81ba-8b63447e0e92)
+            - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Facsoc%2FGd968twh09.png?alt=media&token=570346f5-2e3b-4a22-a942-be0d0636d7db)
+        - GOOGLE_PROTOBUF_VERIFY_VERSION macro [[?]]
+    - optimization
+        - reuse message types, helps memory allocator
+        - monitor message object size using  SpaceUsed method
+        - consider [Google's tcmalloc](https://github.com/gperftools/gperftools) for allocating small objects from multiple threads
+- Advanced:
+    - Reflection: iterating through any message's fields (type agnostic)
+    - https://developers.google.com/protocol-buffers/docs/reference/cpp
+- Ref
+    - https://developers.google.com/protocol-buffers/docs/proto
+    - https://developers.google.com/protocol-buffers/docs/reference/cpp-generated

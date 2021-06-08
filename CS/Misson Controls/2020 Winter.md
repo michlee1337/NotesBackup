@@ -1,0 +1,6 @@
+- ?? what even was i doing lol
+- Focuses:
+    - [[Organization]]
+    - [[Capstone]]
+    - [[Elements of Programming Interviews]]
+    - 

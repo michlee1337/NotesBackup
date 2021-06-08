@@ -1,0 +1,5 @@
+- Problems with REST
+    - REST api contract is not machine readable
+    - streaming is hard, bidirectional is impossible
+    - operations are hard to represent (restart)
+    - inefficient storage

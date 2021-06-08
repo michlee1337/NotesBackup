@@ -1,0 +1,5 @@
+- ask if now is a good time first
+- personalization
+	- signals for when someone is overloaded
+	- how they relieve stress best
+	- how they handle other peoples stress

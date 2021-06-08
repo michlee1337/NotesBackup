@@ -1,0 +1,117 @@
+- Arrow functions
+    - access members of a structure using pointer-
+    - 
+        - 1. associatiate stream w file (open)
+- 
+    - 1. associatiate stream w file (open)
+- preprocess > compile > link
+    - preprocess
+        - # include: copy pastes the header fie into where the include statement is (LOL)
+        - # define <to be replaced> <replace with this>
+        - # if # endif
+    - compile
+        - into obj file w machine code and a main executable (can set compiler to optimize), each thing has a signature
+        - files have no meaning, just tell compiler
+        - cpp is a translation unit that result in object files
+        - you can make a cpp file that includes all the other ones, making one translation unit and one object files
+    - linker
+        - will look for signatures and 
+- Compiled language
+    - translated into machine lang
+- development toolchain
+    - for generating machine code
+    - core: 
+    - Fundamental Datatype
+        - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Facsoc%2FgvuavTwEsd.png?alt=media&token=6a76d105-a220-421e-a5fb-faadad56ee92)
+- Fundamental Datatype
+    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Facsoc%2FgvuavTwEsd.png?alt=media&token=6a76d105-a220-421e-a5fb-faadad56ee92)
+- Compound Datatypes
+    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Facsoc%2FGsMz0XPbh6.png?alt=media&token=f1baf7f2-075a-4ecd-82d0-7fb16ad11ca6)
+- [[cpp for python]]
+    - overloading: based on diff num/ type of parameters
+- go/cstyle
+    - google c++ style
+    - https://google.github.io/styleguide/cppguide.html
+    - [http://www.cplusplus.com/reference/memory/unique_ptr/](https://meet.google.com/linkredirect?authuser=0&dest=http%3A%2F%2Fwww.cplusplus.com%2Freference%2Fmemory%2Funique_ptr%2F)
+        - unique pointers: instead of new and delete
+        - look up examples
+    - no exceptions, err codes
+    - cplusplus.com
+        - vectors and 
+- Input/ Output: Streams
+    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Facsoc%2Fxgf3MBaswT.png?alt=media&token=4da32334-2ab0-419f-80c2-adf556153dda)
+    - extraction >>; insertion <<
+    - stringstream: allow extraction and insertion on strings
+    - [[cpp for python]]
+        - overloading: based on diff num/ type of parameters
+- Namespaces: scoping down global scope entitities
+    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Facsoc%2F0InAU9C08x.png?alt=media&token=6a0a5020-6c84-4d45-8f6c-dec483d9d475)
+    - aliasing: 
+    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Facsoc%2Fg0hN8TSebY.png?alt=media&token=c274b935-6d55-43a3-978f-d8d6f3c22204)
+    - Static storage: vars in global namespace
+        - initialised to zeros
+        - Resources
+- Reference
+    - &ref = val
+    - reference gives an alternative name for smtg
+- Pointers!
+    - object
+    - &var will print out pointer to memory address of var
+    - *pvar = val will make pvar store the memory address
+        - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Facsoc%2FZEMjj5jZhC.png?alt=media&token=d4b6b530-915f-4d4e-8b67-bf5102542244)
+    - *pvar will dereference pvar (will print out value at that memory address)
+    - *&age = age
+        - Smart pointers: automatically allocate and delete memory
+            - unique pointer: cannot copy or reassign or pass
+            - shared pointer: count references (once it hits 0, delete)
+            - weak pointer: sharing without changing ref count 
+    - Classes
+        - class AClass { public: attributes; constructor(){}; };
+        - object methods
+            - getter and setters
+            - inheritence
+                - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Facsoc%2F2y0P_K79Qv.png?alt=media&token=75c429fe-6855-453f-8594-90e2faedd2a5)
+        - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Facsoc%2FulitjM4uJg.png?alt=media&token=fd436022-4f3a-4abb-969f-5d3345a80450)
+        - 
+- vars: consider lifetime and scope
+- Namspaces and visibility
+    - static = only in the file
+        - in classes
+            - static var will have only one in each class (cannot make it diff per class instance)
+            - static method will only operate on the class (no instance)
+        - local static: infinite lifetime, limited scope (useful in singleton)
+    - extern = defined somewhere else
+    - inline = dump the func code where the func is called
+    - include = dumps the file where the include statement is
+- Linker
+    - links
+- Classes
+    - class AClass { public: attributes; constructor(){}; };
+    - object methods
+        - getter and setters
+        - inheritence
+            - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Facsoc%2F2y0P_K79Qv.png?alt=media&token=75c429fe-6855-453f-8594-90e2faedd2a5)
+    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Facsoc%2FulitjM4uJg.png?alt=media&token=fd436022-4f3a-4abb-969f-5d3345a80450)
+    - 
+- virtual functions and v tables:
+    - to override function, add virtual in front of base class or override in front of your overriding func
+- Constructor:
+    - allows implicit conversion (can write explicit keyword to prevent this)
+    - Template: tells compiler how to make something]
+        - code only gets created when template is created (compiler dependent whether template errors will throw)
+- visibility: private public protected (accessible through inheritance) friend
+- https://www.youtube.com/watch?v=vLnPwxZdW4Y
+- Pass by reference const &ref
+- Stack and Heap: RAM allocation
+    - stack: hotter, fixed size
+        - stack things on top of each other (move stack pointer and allocate)
+        - when scope ends, everything gets popped off
+    - heap: dynamic size
+        - need "new" to allocate (and pointer) (smart pointers as well)
+    - always alloc on stack unless too big or need lifetime beyond scope
+- Resources
+    - The Cherno
+        - 
+        - main is the entrypoint to the function
+    - 
+    - Mocking: https://www.youtube.com/watch?v=gqe6eo2-9_Q

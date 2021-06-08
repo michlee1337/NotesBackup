@@ -1,0 +1,5 @@
+- found and used in any order
+- reading and writing is nonlinear
+- layer of information between script and primary source
+- without the burden of style, and the weight of primary source
+- brains and thoughts are diff in extremely subtle ways [[learning]]

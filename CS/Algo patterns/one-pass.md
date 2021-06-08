@@ -1,0 +1,1 @@
+- remember [limited] information about the elems you've already seen to do an O(1) comparison to update return value in later iterations

@@ -1,0 +1,56 @@
+- Google Cloud >> GC Platform >> App Modernization Platform >> Serverless >> Cloud Events >>
+- Eventflow >> Product Surface
+- 
+- Sessions: https://docs.google.com/spreadsheets/d/1v4i8RO34J7hS_a1RYZUHBMsnzRMe_5O2E-v4wkoe30k/edit#gid=0
+- 
+- 
+- Design Decisions: https://docs.google.com/spreadsheets/d/1Y5alOZbEknR8n_DndidDiZUrjhoDg7oE-D-6G4bS9lc/edit#gid=0
+- 
+- https://g3doc.corp.google.com/company/teams/concord/beyond/product_list/index.md?cl=head
+- Teams in GCP
+    - OCTO - [go/octo](https://goto.google.com/octo)
+    - Apigee - [go/apigee](https://goto.google.com/apigee)
+    - Cloud AI (Machine Learning) - [go/cloud-ai](https://goto.google.com/cloud-ai)
+    - IoT - [Cloud IoT Site](https://sites.google.com/a/google.com/cloud-iot-group/home)
+    - Firebase - [go/firebase](https://goto.google.com/firebase)
+    - Core Infrastructure GCP
+        - Core Compute - [Core Compute Site](https://g3doc.corp.google.com/company/teams/cloud-core-compute/index.md)
+        - Networking - [go/cloud-networking](https://goto.google.com/cloud-networking)
+        - Databases
+        - Storage
+        - Data-Analytics
+    - Cloud Services Platform
+        - Google Compute Engine (GCE) - [go/gce](https://goto.google.com/gce)
+        - Pantheon / UI/FE - [go/pantheon](https://goto.google.com/pantheon)
+        - Services - [go/cloud-services-platform](https://goto.google.com/cloud-services-platform)
+        - Serverless - [go/serverless](https://goto.google.com/serverless)
+            - Google Cloud Functions (GCF) - [go/cloud-functions](https://goto.google.com/cloud-functions)
+            - Google App Engine (GAE)
+    - Security & Privacy - [go/security](https://goto.google.com/security)
+    - DevOps - [go/devops](https://goto.google.com/devops)
+    - DevRel - [go/cloud-devrel](https://goto.google.com/cloud-devrel)
+    - Docs - [go/clouddocs](https://goto.google.com/clouddocs)
+    - EngProd - [go/cloud-engprod](https://goto.google.com/cloud-engprod)
+    - TPMs supporting GCP and TI - [go/cloud-programs](https://goto.google.com/cloud-programs)
+    - Program Management Experience - [go/pmx](https://goto.google.com/pmx)
+    - UX - [go/cloudux](https://goto.google.com/cloudux)
+    - []()
+    - ### TI Teams
+    - [](https://cider.corp.google.com/?ws=G3DOC-gcpti-about-2020-06-05-161747&file=//depot/company/teams/gcp-ti/about.md:80)
+        - 24x7
+            - Network Operations - [go/netops](https://goto.google.com/netops)
+            - Hardware Operations - [go/hwops](https://goto.google.com/hwops)
+            - Datacenters (GDC) - [go/gdc-home](https://goto.google.com/gdc-home)
+            - SRE - [go/sre](https://goto.google.com/sre), [go/who-is-sre](https://goto.google.com/who-is-sre)
+        - Core Infrastructure TI
+        - CorpEng (TI-funded efforts) - [go/corpeng](https://goto.google.com/corpeng)
+        - Global Capacity Delivery (GCD) - [go/gcd](https://goto.google.com/gcd)
+        - Google3 - [go/google3-portal](https://goto.google.com/google3-portal)
+        - Optimal Fleet - [go/optimal-fleet-site](https://goto.google.com/optimal-fleet-site)
+        - Platforms - [go/platforms](https://goto.google.com/platforms)
+        - Security/Privacy - [go/security](https://goto.google.com/security)
+        - UFO - [go/ufo](https://goto.google.com/ufo)
+- Product/ team ref
+    - https://plx.corp.google.com/table/teams.Products
+    - 
+    - https://g3doc.corp.google.com/company/teams/gcp-ti/GCP-TI-Planning/GCP-Roadmaps.md?cl=head

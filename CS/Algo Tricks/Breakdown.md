@@ -1,0 +1,58 @@
+Key concepts
+- algorithms
+	- optimization
+		- less work/ faster time
+			- complexity
+		- cut unnecessary work
+			- use heuristics [[greedy]]
+		- save and reuse work
+			- optimal substructure [[dp]]
+	- states
+		- state traversal
+			- common traversals for [[string & array]]
+- coding
+	- knowing your language
+	- style
+	- tricks
+	- robustness
+		- testing
+			- assumptions
+			- clarity of input, output, and function
+		- knowing common mistakes
+		- knowing common breaking cases (edge cases)
+- communicating
+	- try to be comfortable if possible
+		- remember interviewer is a human being
+		- be honest
+		- get therapy xD
+	- solve the problem together
+		- tell them what you're thinking of and what you're stuck on
+		- also feel free to say "lemme think for a bit"
+		- its totally fine if they give you a tip or two. good interviewers dont dock points for that because thats what normal work is like
+- problem solving
+	- really just a combination of building your mental database of algorithms and knowing how to help yourself be "creative"/ diffuse thinking
+	- common strats:
+		- "solve it on paper"
+		- get visual if you can and the problem suggests it (also probably know common representations like memoization tables, it helps)
+		- brute force it and see what you're not using
+		- consider key traits of the problem (of the function or of the input structure) and see what you can take advantage of
+		- !!! control your emotions, you can't be creative if you're panicking. drink water super slow is a common trick. pure exposure therapy is another
+	- hard reminders
+		- working brute force is better than not working
+		- honestly people dont expect you to know obscure algorithms, so dont stress about getting the absolute optimal solution if it requires an algorithm that is really rarely used in any other question
+			- kanade would be helpful to know after you've master fundamentals. otherwise, anything that sounds like someone's name is probably not gonna come up again.
+		- remember code is a language to tell your algorithm to the computer. you're gonna need both, but dont let code get in the way of thinking about algos.
+
+process of learning
+- learn key concepts
+	- ? take notes
+- try questions from fundamental to extra
+	- ? check back to notes and see where it ties in
+	- ? add to notes if new realization
+	- if you can't solve it in 20 minutes, just read a problem solution
+		- try to understand how exactly they are solving it (what is the problem attributes they are noticing, and what techniques they are using to take advantage of it, and what benefits that brings)
+		- revisit it again and try to solve it, repeat until you can do it on your own and explain why
+- repeattttttt (took me like a hardcore year to get decent and im still not OP)
+	- give yourself time
+	- focus on effort, not results
+	- know that technical interviews are a little bullshit, life and external factors are unfair, and that you always have other options (lol)

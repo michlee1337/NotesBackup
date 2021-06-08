@@ -1,0 +1,80 @@
+- Help: Ana Manolache, Sherman
+- Checklist
+- ### Cloud Functions (GCF)
+    - Workflow: Creating background functions that are event triggered
+        - <<>> docker
+        - Trigger
+            - ### Select provider
+            - ![](https://lh6.googleusercontent.com/xmeFvllbUD33QCHE3-GK-vMrXhKpTSGm3wT3F5Cm2gOS2zfCS_KsH0nqTXoyn3xV0aySJqKjBsJobbAWvPxniZUPUNbNCczQSebLxj3UgYTrBBRlK_dTjFQMu8rENhX4i-imuK_w)
+        - Upload Source Code
+            - Select language
+        - Select Main Function (func to execute)
+        - Create
+    - Functions list
+        - Status icon: deploying, fail, success
+        - Logs
+            - Filters: Limits
+            - Moderate detail
+            - JSON object
+    - Deploy
+        - Gcloud console
+        - Firebase API client (can deploy multiple at once)
+            - Functions: Firebase, cloud storage, pubsub
+    - Firebase
+        - BTS a cloud project (GC)
+        - Can deploy function from FIrebase database (x create)
+        - Crashlytics: monitors and runs trigger functions
+        - Test lab: run tests
+    - Architecture
+        - ![](https://lh6.googleusercontent.com/RbKKHHlpOS_0R2F1cjCAXHaVlyFwLJeSmkz6IxltAnJ4QWdjUG0tJBZCrN5fVn0D3bNfwLdSAn-zcjFts718RuQny-Q-qZyOUfCGVnVV_6Kt2DdihWn9iDBhZUtQO4QVfCL7tYUH)
+        - Controlplane: function state
+        - Dataplane: event delivery
+        - Dataflow
+            - Create image,
+            - Upload to appengine (worker: function image)
+        - Future
+            - Use cloud run events for GCF, GCF will use cloud run
+        - Creating triggers
+            - Cloud pub/ sub
+                - User creates topic
+                - Created push subscription
+                    - Points to AppEngine endpoint
+        - Events Architecture
+            - ![](https://lh4.googleusercontent.com/tZwi5HkGe_BcjEhlTbsNYn7soJk-hwJIQgB0hj1pNH_rLQ3CC8RgxCNdUX3J-HatnAT2Jxp-_YFaTAnqjVzGh4QM9TtbwsHx0kOLeHKV0ldaBcDd8bAcnF0GJAHdK_x5j14oyEHg)
+            - Load running application?
+            - Everything in GCF is async
+            - GCF event flow (two teams, same service)
+            - Ref event sources for delivery methods and trigger storage
+            - Spanner queue is owned by event provider!!
+            - Dataplane is deployed to appengine
+        - Eventing code for Software dev code pointers events
+            - Eventflow Library
+                - Create delete update funcs
+    - Event Handlers
+        - ![](https://lh4.googleusercontent.com/X7vJD80A8ZE3fGJ-HVIj37AvbUq23hVBw6xPr3tkpp2mgr0f2e1fqIO-HC0PGVy7vOoK7-0bu6743yKThmoFVuNu2ODkse6gwYYQ2mM5lG1Arse3cUmnATVLEJ2wweCpxUZ9A_Fm)
+        - Highlights: v1beta1, v1beta2 (services that use event type)
+            - Important for debugging
+            - supervisor will wrap based on event type
+    - If changing supervisor
+        - Add hashtag on docker image to deploy from control plane??
+- Learn about
+    - Reflection??
+    - Cloud Run
+    - Docker
+    - FDS/ firebase rules
+    - Spanner database
+    - EventFlow
+    - Event handler, provider, filtering, logging, supervisor, worker; deployment, storage
+    - “Wrap”
+    - Logging
+    - Midas package manager
+    - Borg
+    - Sigma
+        - Can search your deployments by name
+    - Analog
+        - Add log labels to search logs efficiently
+    - bequt
+- go/gcf-events
+- https://cloud.google.com/functions/docs
+- g3doc/corp.google.com/cloud/eventflow/g3doc/ef/gcf_events
+- slides

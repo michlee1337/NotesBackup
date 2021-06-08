@@ -1,0 +1,2 @@
+- find missing number: for every value present, mark that index. finally indexes unmarked are missing
+- [[review]]

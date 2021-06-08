@@ -1,0 +1,49 @@
+- Why: beyond bugs
+    - increase productivity
+        - faster dev cycles
+        - better design
+            - exposes API flaws early
+            - focus on modularization
+        - higher code quality
+            - break down codeblocks
+        - only write necessary code
+            - overcome early extensions/ optimisations
+    - helps document code
+    - easier to modify code
+- types of code
+    - primarily
+        - unit
+            - what to test
+                - common cases
+                - edge cases
+                - failure cases (what if a dependency breaks)
+                - anything that causes a bug
+                    - ensures future dev won't reintroduce bugs
+                - ambiguous cases
+            - good properties
+                - smallest component possible
+                - fast (no file i/o like db), no external slow funcs
+                - comprehensive (all inputs)
+                - deterministic
+                - independent of other tests
+            - mock objects
+                - decouple your class with dependency injection
+                - for test code use a mock with same interface
+                    - create interface
+                    - for prod, use a real thing with that interface
+                    - for test, use fake thing
+                - types of mocks
+                    - stub (only 1 behavior, no func), fake (object w controllable behavior), true (feature rich, normally created using mock framework)
+            - !! don't use 0 or 1 or 2 (0 and 1 are weird in general, 2 is weird in bitshift)
+        - integration
+            - ideally two units
+        - functional
+            - end to end
+    - load vs stress
+        - load for expected
+        - stress to find breakpoint of systems
+    - perspective
+        - is it correct?
+        - usability?
+        - internationalisation
+    - white vs black: know source code vs not

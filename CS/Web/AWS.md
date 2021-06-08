@@ -1,0 +1,1 @@
+- https://adayinthelifeof.nl/2020/05/20/aws.html?utm_source=hackernewsletter&utm_medium=email&utm_term=fav

@@ -1,0 +1,38 @@
+- Intro
+- Atomic data types
+- Constrol struc
+- Import:
+    - <> for standard imp, "" for non standard
+- main
+    - every c++ program must have it, it must return int
+- comments: //; /* */, documentation: /** */
+- iostream
+    - stream: channel of data flow
+    - cout: console output
+- pointer: holds memory location (special data type)
+    - &var: outputs memory address of var
+    - vartype *identifier; // declares pointer
+    - ex:
+        - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Facsoc%2FJdxCgt53kl.png?alt=media&token=8b4227fa-62c7-45a1-af7d-f1144a9aea36)
+    - dangling pointer reference
+        - refering to memory address at NUM rather than memory address of NUM (*ptr = &num vs *ptr = num)
+        - null: *ptr = nullptr
+- functions: ret-type func-name (param-type param-name) {}
+    - pass by value vs by reference (useful to return multiple values)
+        - by value: normal
+        - by ref: attach & to the start of the param name
+    - can overload functions (some ops reserved)
+- 
+- collection types: arrays vectors strings sets hash tables
+    - arrays used for static, vector used for dynamic sizing
+    - array of type: type name[size]
+        - !! c++ will let you iterate beyond your array
+    - vector:
+    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Facsoc%2FF_--UvKEm7.png?alt=media&token=b59aee35-8c42-48c9-a943-cda1c4195a7a)
+    - hash table: <unordered map>
+    - <unorderd_set>.
+- file handling
+    - ifstream ofstream
+    - declare stream before using
+    - always pass streams by reference
+    - .eof() checks end of file

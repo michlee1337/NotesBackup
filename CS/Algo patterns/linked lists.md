@@ -1,0 +1,3 @@
+- tricks
+    - use dummy node to avoid prepopulating
+    - ex: [[114 - Flatten Binary Tree to Linked List]]

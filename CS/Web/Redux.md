@@ -1,0 +1,11 @@
+- Purpose: Implements app wide state; enforces strict unidirectional data flow around state
+- "Components"
+    - Store: Redux store is an abstracted app-wide store; uses [[React Context]]
+    - Action: a simple plain object describing what happened
+    - Reducer: does something to update store upon action
+- Data Flow:
+    - you tell store to dispatch action
+    - store calls the reducer function associated with action
+    - ## root reducer combines reducer state outputs
+    - redux store saves complete new state tree
+- Never mutate state, always return a new copy of state.

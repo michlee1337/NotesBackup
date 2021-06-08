@@ -1,0 +1,1 @@
+- https://eryb.space/2020/05/27/diving-into-go-by-building-a-cli-application.html?utm_source=hackernewsletter&utm_medium=email&utm_term=code

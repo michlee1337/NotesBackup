@@ -1,0 +1,4 @@
+- [[2020 Summer]]: [[Self Assurance]]
+- [[2020 Fall]]: [[Energy]]
+- [[2020 Winter]]: [[Reflection]]
+- [[0 - 2021 Spring]]: ?

@@ -1,0 +1,61 @@
+- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Facsoc%2FNrhY5UB_qk.png?alt=media&token=4613ad3b-f05c-47d8-89bd-97bab57b5c5a)
+- Questions 
+    - #question what type of filters are there in envoy? (listener level, l3/l4 <> networking filter <> envoy filter)
+    - #question relationship between connection managers and networking filters? does only http have a connection manager?
+    - #question reccomended need to know? routing? upstream clusters?listeners? service discovery? <insert documentation index here>
+    - #question can't find "extension" in docs? is it a listener filter?
+    - #question to build we use envoy as a subdirectory/module? link the new filter and @envoy main entry lib?
+    - #question how to change filter using docker image???
+- Network Proxy
+    - sidecars itself by a host (applicarion code)
+- Listeners: one envoy = list of listeners
+    - one envoy, many listeners (generally one envoy per machine)
+    - each listener has some number of filter chains (each chain selected based on match criteria)
+    - each listener can have listener filters as well (processed before network filters)
+        - mostly for connection metadata to affect later processing via filters/ clusters
+    - filter chain made of
+        - filter chain match
+        - set of filters
+            - each filter is an L3/L4 filter
+        - option TLS context (?)
+        - den den
+    - filters can be read or write
+    - also listener discovery service (?)
+
+- TCP proxy
+    - envoy is fundamentally a l3/l4 server
+    - so l3/l4 proxy
+    - 1:1 connection proxy between downstream clients and upstream clusters
+    - can be used in conjunction with other filters like mongo (?)
+    - will obey connection limits from cluster upstream global resource manager
+        - if cannot fit limits, will not make connectoin
+    - <config reference>
+- UDP proxy supported via the UDP proxy listener filter 
+    - #relevant? can we handle grpc the same way
+- DNS
+    - similar, uses UDP listener DNS filter
+- HTTP
+    - network level filter: HTTP connection manager
+        - translates
+        - header sanitizes
+        - has route table
+        - built on http2 #nani
+        - #blahblah connection management retries
+    - filters
+        - within connection manager
+        - types: decoder, encoder, decoder/encoder (related to read or write)
+        - envoy has built in router filter
+            - #nani reverse proxy request handling
+        - last filter in filter stack must be a terminal filter (probably router filter)
+        - ordering: decoder in order, encoder in reverse
+    - router filter
+        - takes incoming req, matches to upstream cluster, acquires connnection pool #nani, and forwards request
+    - health checking filter
+        - #nani i thought this was "extension"
+- GRPC
+    - https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/other_protocols/grpc
+    - grpc bridge filter #relevant ?
+- #relevant sharing data between filters: https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/advanced/data_sharing_between_filters
+- #relevant extensions: https://www.envoyproxy.io/docs/envoy/latest/extending/extending
+- 
+    - 

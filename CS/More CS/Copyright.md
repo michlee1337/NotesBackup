@@ -1,0 +1,78 @@
+- Anything by Google employee is protected by Google Copyright
+- Open Source: Open Source Initiative and Free Software Foundation
+    - OSI and FDF (inherit from Debian) to define Open Source license
+    - Reqs
+        - 1) Make source code available
+        - 2) Give permissions to let people use
+        - 3) Any people can use
+        - 4) Any purpose is valid
+    - List of OS licenses available at foundation website
+        - Ex: MIT OS license
+            - requires credit
+- All software licenses are contracts
+    - for contracts to be binding, both parties need to give something up to the contract
+- Good License:
+    - 1) Clarifies what permissions are granted
+    - 2) Clarifies what is required of user
+- Protections of MIT requirements:
+    - provides credit
+    - protects against responsibility
+- Open Source is
+    - anyone can inspect, modify, enhance
+    - Community oriented
+    - Principles
+- Why use OS
+    - free and easy
+    - flexible
+    - community
+- Ecosystem
+    - tech >> user >> contributor (feedback)
+    - Examples of OS
+        - VLC, vim, linux, android
+- Google OS
+    - more than half of codebase is OS (700 million)
+    - respect OS licenses
+- !! google os legal stuff android java?
+- Mongo DB: Snapchat of DB
+- Can't use or patch
+    - anything under AGPL or SSPL (GPL?)
+        - MongoDB, RStudio
+    - GPL will owe source code downstream to upstream author
+        - LGPL we can sometimes use for dynamic source code
+        - AGPL remote network interface (API) is distributed: TABOO
+    - code without explicit license 
+    - non osi non-licenses (WTFPL, beerware)
+    - forbiding commercial use (CC-BY-NC) !!!!!
+        - NC is non commercial
+- Can't patch
+    - unlicense can be used but not patched
+        - also will release into public domain
+    - for government project, will waive all copyright
+- As long as licenses are not exclusive, you can give diff licenses to diff people
+- Anything we install locally or make needs to have commercial license/ go through staff
+- patching external
+- check patching
+- third party code must be separate from your code
+- git-on-borg: internal github
+- go/releasing
+    - intern mentors responsible
+- side projects are discouraged!!
+    - anything done on google hours is assumed google work
+- copyright infringement requires copying (patent protects functionality)
+- must recreate function without copy
+    - naming, how you arbitrarily sequence
+    - function (math) is not copyright protected
+    - content/ implementation is 
+    - psuedocode is maybe copyrightable (anything arbitrary is copyrightable)
+- go/releasing for new repo, else just go/patching
+    - google first party OS project doesn't need review/ approval
+- go/patching only for the first patch
+- associate google email for my current github account
+- Ref
+    - go/softwarecenter
+    - go/thirdpartylicenses
+    - go/patching
+    - go/github
+    - opensource-licensing@
+    - https://docs.google.com/presentation/d/1yBEDwCwOG2A4IVFwWTKBAEikzU0sk86bwR3gbTEeCy4/edit#slide=id.g2c6e5c53c3_0_7332
+- Dashiell Renaud

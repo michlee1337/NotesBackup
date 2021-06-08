@@ -1,0 +1,2 @@
+- share values between components (without being strictly top down)
+    - kind of like "global"

@@ -1,0 +1,30 @@
+- Yaron
+    - Toronto, was in Irvine 
+    - U. Waterloo, graduated a year ago
+    - Google FTE: 6 months
+    - Working on: onvoice filter
+        - takes pubsub converts to cloud events
+    - On Cloud because interested in infrastructure stuff
+    - previously interned on ads
+- !! could use Go SDK as ref in my project mayb
+- Team insider info
+    - Cloud team!
+        - more business oriented 
+        - fast moving
+    - serverless team is cute and works a lot
+    - Hamid is too busy
+    - Product Areas
+        - check out /me
+        - partner team is Ingress led by Ksenia (same product, diff part of architecture)
+- C++ Advice
+    - go/cstyle: ask for access [[Hamid#2]]
+        - Alt/ similar: https://google.github.io/styleguide/cppguide.html
+        - Styling to watch out for
+            - [http://www.cplusplus.com/reference/memory/unique_ptr/](https://meet.google.com/linkredirect?authuser=0&dest=http%3A%2F%2Fwww.cplusplus.com%2Freference%2Fmemory%2Funique_ptr%2F)
+                - unique pointers: instead of new and delete
+                - look up examples
+            - no exceptions, err codes
+    - good ref: cplusplus.com
+    - best ref: Yaron has lots of experience and loves it :P
+- links
+    - me/

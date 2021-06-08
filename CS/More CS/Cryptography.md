@@ -1,0 +1,15 @@
+- What is security?
+    - secrecy = mechanisms and context 
+        - restrict access
+        - ensuring it's untampered with (seals)
+        - ensuring it can't be forged (watermarks)
+        - authorisation (identification documents)
+        - context (they got to through protections into this context so should be ok)
+- gaining profile now
+    - internet - made info cheaper to create access exchange store
+- cryptography is core to most IS mechanisms
+- Perspectives
+    - individual technology
+        - right to privacy and freedom of expression
+    - business
+    - 

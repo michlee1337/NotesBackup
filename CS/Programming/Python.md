@@ -1,0 +1,3 @@
+- Debugging: https://martinheinz.dev/blog/24?utm_source=hackernewsletter&utm_medium=email&utm_term=code
+- Functional Python: https://github.com/dry-python/returns?utm_source=hackernewsletter&utm_medium=email&utm_term=code
+- Hypermodern: https://cjolowicz.github.io/posts/hypermodern-python-01-setup/?utm_source=hackernewsletter&utm_medium=email&utm_term=code

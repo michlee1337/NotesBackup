@@ -1,0 +1,1 @@
+https://uxdesign.cc/why-has-no-one-made-a-better-goodreads-dfc9cb9e149a
