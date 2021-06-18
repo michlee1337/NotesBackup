@@ -22,7 +22,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Words I Love.md",
+            "file": "CS/Algo/Complexity.md",
             "mode": "source"
           }
         }
@@ -81,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Words I Love.md",
+                "file": "CS/Algo/Complexity.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -100,15 +100,15 @@
   },
   "active": "9d78c365470e87a5",
   "lastOpenFiles": [
+    "CS/Algo/Complexity.md",
+    "CS/Algo/Untitled.md",
+    "CS/Algo Datastructures/adv/segment trees.md",
+    "CS/Algo patterns/Untitled.md",
+    "CS/Algo Datastructures/Untitled.md",
+    "CS/Untitled.md",
     "Words I Love.md",
     "types of cognitive errors.md",
     "long term goals.md",
-    "spaced repitition - deliberate practice.md",
-    "Mission Control/Summer 2021.md",
-    "augmenting human intellect.md",
-    "interactive articles.md",
-    "spaced repitition/ deliberate practice.md",
-    "better goodreads.md",
-    "Mission Control/Todo.md"
+    "spaced repitition - deliberate practice.md"
   ]
 }

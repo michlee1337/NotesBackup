@@ -6,7 +6,7 @@ Key concepts
 		- cut unnecessary work
 			- use heuristics [[greedy]]
 		- save and reuse work
-			- optimal substructure [[dp]]
+			- optimal substructure [[DP]]
 	- states
 		- state traversal
 			- common traversals for [[string & array]]
