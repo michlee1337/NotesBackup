@@ -22,7 +22,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "spaced repitition - deliberate practice.md",
+            "file": "Words I Love.md",
             "mode": "source"
           }
         }
@@ -81,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mission Control/Summer 2021.md",
+                "file": "Words I Love.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -98,17 +98,17 @@
     "direction": "horizontal",
     "width": 304
   },
-  "active": "00cec24ddab56865",
+  "active": "9d78c365470e87a5",
   "lastOpenFiles": [
+    "Words I Love.md",
+    "types of cognitive errors.md",
+    "long term goals.md",
+    "spaced repitition - deliberate practice.md",
     "Mission Control/Summer 2021.md",
     "augmenting human intellect.md",
-    "spaced repitition - deliberate practice.md",
     "interactive articles.md",
     "spaced repitition/ deliberate practice.md",
     "better goodreads.md",
-    "Mission Control/Todo.md",
-    "collaborative annotation.md",
-    "collaboration.md",
-    "annotation.md"
+    "Mission Control/Todo.md"
   ]
 }
